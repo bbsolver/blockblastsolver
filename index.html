@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Block Blast Solver | Solve Your Block Blast in 3 Easy Steps</title>
+    <meta name="description" content="Boost your Block Blast score with our smart solver. Get instant strategic moves to maximize block clearance and improve gameplay. Clear More, Score Higher.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bbsolver.com/">
+    <meta property="og:title" content="Block Blast Solver | Solve Your Block Blast in 3 Easy Steps">
+    <meta property="og:description" content="Boost your Block Blast score with our smart solver. Get instant strategic moves to maximize block clearance and improve gameplay. Clear More, Score Higher.">
+    <meta property="og:image" content="https://bbsolver.com/public/social-preview.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://bbsolver.com/">
+    <meta property="twitter:title" content="Block Blast Solver | Solve Your Block Blast in 3 Easy Steps">
+    <meta property="twitter:description" content="Boost your Block Blast score with our smart solver. Get instant strategic moves to maximize block clearance and improve gameplay. Clear More, Score Higher.">
+    <meta property="twitter:image" content="https://bbsolver.com/public/social-preview.png">
+
+	  <link rel="shortcut icon" href="./favicon.ico" />
+	  <link rel="canonical" href="https://bbsolver.com"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- add animate.css -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      rel="stylesheet"
+    />
+    <!-- add custom styles -->
+    <link href="./css/styles.css" rel="stylesheet" />
+    <meta name="google-site-verification" content="OD-i3fYEEmPwU_uxwRUM6tPtFZJN9JthLz9_mtxWm6s" />
+  </head>
+
+
+  <body class="bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 min-h-screen">
+    <!-- navbar -->
+    <nav class="bg-transparent text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-24">
+          <a href="/" class="flex items-center gap-2">
+            <img src="./public/logo.png" alt="Block Blast Solver Logo" class="h-12 w-auto mr-2">
+            <h3 class="text-2xl font-bold text-slate-900">Block Blast Solver</h3>
+          </a>
+          
+          <button id="mobile-menu-button" class="md:hidden p-2 rounded-md hover:bg-white/10 transition duration-300">
+            <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+
+          <div class="hidden md:flex space-x-4">
+            <a href="/" class="text-gray-800 hover:bg-white/10 px-3 py-2 rounded-full transition duration-300">Home</a>
+            <a href="/manual-input.html" class="text-gray-800 hover:bg-white/10 px-3 py-2 rounded-full transition duration-300">Manual Input</a>
+            <a href="#how-it-works" class="text-gray-800 hover:bg-white/10 px-3 py-2 rounded-full transition duration-300">How to Use</a>
+          </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden">
+          <div class="px-2 pt-2 pb-3 space-y-1 bg-white/90 backdrop-blur-sm rounded-lg mt-2">
+            <a href="/" class="block text-gray-800 hover:bg-white/50 px-3 py-2 rounded-md transition duration-300">Home</a>
+            <a href="/manual-input.html" class="block text-gray-800 hover:bg-white/50 px-3 py-2 rounded-md transition duration-300">Manual Input</a>
+            <a href="#how-it-works" class="block text-gray-800 hover:bg-white/50 px-3 py-2 rounded-md transition duration-300">How to Use</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- main content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col items-center">
+      <!-- title section -->
+
+      <header>
+        <!-- Hero Container -->
+        <div class="mx-auto w-full max-w-7xl py-8 md:py-20">
+          <!-- Component -->
+          <div class="grid items-center justify-items-start gap-8 sm:gap-20 lg:grid-cols-2">
+            <!-- Hero Content -->
+            <div class="flex flex-col">
+              <!-- Hero Title -->
+              <h1 class="mb-4 text-4xl font-bold md:text-6xl"> Block Blast Solver - Clear More, Score Higher </h1>
+              <p class="mb-6 max-w-lg text-sm text-gray-500 sm:text-xl md:mb-10 lg:mb-12"> Solve Your Block Blast Puzzles in 3 Easy Steps. Transform Your Block Blast Strategy with Instant, Precision Move Recommendations.</p>
+              <!-- Hero Button -->
+              <div class="flex items-center">
+                <a href="#" class="mr-5 items-center rounded-xl bg-black px-6 py-3 font-semibold text-white md:mr-6 lg:mr-8" onclick="document.getElementById('image-upload').click(); return false;"> Upload Screenshot </a>
+                <a href="/manual-input.html" class="flex max-w-full items-center font-bold hover:text-purple-600 transition duration-300">
+                  <img src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a94bd85e6cf98_ArrowUpRight%20(4).svg"
+                    alt="Manual Input" class="mr-2 inline-block max-h-4 w-5" />
+                  <p>Manual Input</p>
+                </a>
+              </div>
+            </div>
+            <!-- upload area -->
+            <div id="image-section" class="w-full bg-white/70 backdrop-blur-sm p-8 rounded-2xl transition-all duration-300">
+              <div id="image-container" class="w-full aspect-square">
+                <div id="upload-area" class="w-full h-full">
+                  <label
+                    for="image-upload"
+                    class="flex flex-col items-center justify-center w-full h-full border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100 transition duration-300"
+                  >
+                    <div
+                      class="flex flex-col items-center justify-center pt-5 pb-6"
+                    >
+                      <svg 
+                        class="w-10 h-10 mb-3 text-gray-400"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M12 4v12m0-12l-4 4m4-4l4 4m-10 8h12"
+                        />
+                      </svg>
+                      <p class="mb-2 text-sm text-gray-500 text-center">
+                        <span class="font-semibold">Click or drag</span> to upload your Block Blast screenshot
+                      </p>
+                      <p class="text-xs text-gray-500">
+                        Supports PNG, JPG, GIF, WEBP...
+                      </p>
+                    </div>
+                    <input
+                      id="image-upload"
+                      type="file"
+                      class="hidden"
+                      accept="image/*"
+                    />
+                  </label>
+                </div>
+             
+                <div id="preview-area" class="hidden w-full h-full relative">
+                  <div
+                    id="uploaded-image"
+                    class="w-full h-full flex items-center justify-center bg-gray-50 border-2 border-gray-200 rounded-lg"
+                  >
+
+                  </div>
+                  <button
+                    id="delete-image"
+                    class="absolute top-2 right-2 bg-gray-500/50 hover:bg-gray-600/50 text-white p-1.5 rounded-full transition duration-300"
+                  >
+                    <svg
+                      class="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+
+      <!-- game area -->
+      <div class="mx-auto w-full px-0 max-w-7xl grid-cols-1 md:grid-cols-3">
+        <div class="bg-white/70 rounded-2xl">
+          <!-- auto mode -->
+          <div class="col-span-2 grid grid-cols-1 md:grid-cols-2">
+          <div class="col-span-1 space-y-8 p-2 md:p-8">
+
+            <div class="flex text-center px-4 flex-col items-center my-4">
+              <h3 class="text-xl font-semibold">🧩 Blocks Details</h3>
+              <p class="text-md text-gray-500">Analyzed block data from your Block Blast screenshot</p>
+            </div>
+            <!-- game grid -->
+            <div class="p-2 md:p-4">
+              <div class="flex justify-center mb-8">
+                  <div
+                    id="game-grid"
+                    class="grid grid-cols-8 gap-1 w-full aspect-square bg-gray-100 p-2 rounded"
+                  >
+                    <!-- dynamic 8x8 grid -->
+                  </div>
+                </div>
+
+
+            <!-- piece to place -->
+              <div>
+                <div class="grid grid-cols-3 gap-4 w-full mx-auto">
+                  <div
+                    id="piece-1"
+                    class="grid grid-cols-5 gap-0.5 aspect-square bg-gray-100 p-2 rounded"
+                  >
+                    <!-- dynamic 5x5 grid -->
+                  </div>
+                  <div
+                    id="piece-2"
+                    class="grid grid-cols-5 gap-0.5 aspect-square bg-gray-100 p-2 rounded"
+                  >
+                    <!-- dynamic 5x5 grid -->
+                  </div>
+                  <div
+                    id="piece-3"
+                    class="grid grid-cols-5 gap-0.5 aspect-square bg-gray-100 p-2 rounded"
+                  >
+                    <!-- dynamic 5x5 grid -->
+                  </div>
+                </div>
+                <p class="text-center text-sm text-gray-400 mt-4">If the recognition is incorrect, Click <a href="/manual-input.html" class="text-indigo-600 hover:underline"> here </a>for manual input</p>
+              </div>
+          </div>
+          </div>
+
+          <div class="solution-container p-8 w-full">
+            <div class="mb-4 flex text-center flex-col items-center my-4">
+              <h3 class="text-xl font-semibold">🎮 Block Blast Solver</h3>
+              <p class="text-md text-gray-500">Follow these steps to clear the most lines efficiently</p>
+            </div>
+            <div class="h-8 flex items-center justify-center">
+              <p class="solution-text text-center text-indigo-600 font-medium"></p>
+            </div>
+            <!-- solution grids -->
+            <div class="col-span-1 w-full p-8 solution-grids grid grid-cols-1 lg:grid-cols-2 gap-4">
+              <div class="step-container">
+                <p class="text-sm font-medium mb-2">Step 1</p>
+                <div id="auto-step-1-grid" class=" grid grid-cols-8 gap-0.5 w-full aspect-square bg-gray-100 p-2 rounded"></div>
+                <div id="auto-step-1-label" class="text-center text-sm my-2 text-indigo-600"></div>
+              </div>
+              <div class="step-container">
+                <p class="text-sm font-medium mb-2">Step 2</p>
+                <div id="auto-step-2-grid" class="grid grid-cols-8 gap-0.5 w-full aspect-square bg-gray-100 p-2 rounded"></div>
+                <div id="auto-step-2-label" class="text-center text-sm  my-2 text-indigo-600"></div>
+              </div>
+              <div class="step-container">
+                <p class="text-sm font-medium mb-2">Step 3</p>
+                <div id="auto-step-3-grid" class="grid grid-cols-8 gap-0.5 w-full aspect-square bg-gray-100 p-2 rounded"></div>
+                <div id="auto-step-3-label" class="text-center text-sm  my-2 text-indigo-600"></div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+
+      </div>
+
+    <!-- feature area -->
+      <section class="w-full pt-32">
+        <div class="max-w-7xl mx-auto">
+          <!-- Section Header -->
+          <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold mb-4">Why Choose Block Blast Solver? ❤️</h2>
+            <p class="text-gray-600 max-w-3xl mx-auto">
+              Struggling to crack those tough Block Blast levels? Our Block Blast Solver is here to transform your gaming experience with cutting-edge technology that takes your gameplay to the next level!
+            </p>
+          </div>
+
+          <!-- Features Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Feature 1 -->
+            <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-8">
+              <h3 class="text-2xl font-semibold mb-4">
+                <span class="mr-2">🖼️</span>Automatic Block Recognition
+              </h3>
+              <p class="text-gray-500">
+                Forget manual input hassles! Our Block Blast Solver uses advanced image recognition technology to instantly scan and understand your game board.
+              </p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-8">
+              <h3 class="text-2xl font-semibold mb-4">
+                <span class="mr-2">⚡</span>Lightning-Fast Analysis
+              </h3>
+              <p class="text-gray-500">
+                The Block Blast Solver's cutting-edge AI processes your game board in milliseconds, transforming complex puzzle challenges into crystal-clear strategies faster than you can swipe a block.
+              </p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-8">
+              <h3 class="text-2xl font-semibold mb-4">
+                <span class="mr-2">🧠</span>Genius-Level Strategy Optimization
+              </h3>
+              <p class="text-gray-500">
+                Think of our solver as your personal Block Blast strategy coach. Our intelligent algorithm doesn't just suggest moves – it calculates the absolute best strategy to maximize block clearance in the current game round.
+              </p>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-8">
+              <h3 class="text-2xl font-semibold mb-4">
+                <span class="mr-2">📊</span>Crystal-Clear Solution Visualization
+              </h3>
+              <p class="text-gray-500">
+                We believe in making complex strategies simple. Our Block Blast Solver doesn't just tell you what to do – it shows you exactly how to do it. With intuitive, easy-to-understand visual guides, you'll see precisely which blocks to move and why.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- how it works section -->
+      <section id="how-it-works" class="w-full pt-32">
+        <div class="max-w-7xl mx-auto">
+          <!-- Section Header -->
+          <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold mb-4">How the Block Blast Solver Transforms Your Gameplay 🚀</h2>
+            <p class="text-gray-600 max-w-3xl mx-auto">
+              Using Block Blast Solver is super easy—just upload your puzzle screenshot, and let the solver work its magic.
+            </p>
+          </div>
+
+          <!-- Single Card Container -->
+          <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-4">
+            <!-- Card Header -->
+            <div class="my-8 text-center">
+              <h3 class="text-2xl font-semibold mb-4">
+                Intelligent Screenshot Recognition
+              </h3>
+              <p class="text-gray-500 text-sm max-w-3xl mx-auto">
+                Perfect for Hungry Studio's Official Block Blast Games (iOS & Android). Solving your Block Blast challenges has never been easier.
+              </p>
+            </div>
+
+            <!-- Steps Grid -->
+            <div class="grid grid-cols-1 p-4 md:grid-cols-3 gap-16">
+              <!-- Step 1 -->
+              <div>
+                <div class="bg-gray-100 rounded-lg mb-6 overflow-hidden">
+                  <img 
+                    src="./public/block-blast-solver-step1.PNG" 
+                    alt="block blast solver step 1" 
+                    class="w-full h-full object-cover border border-slate-200 rounded-lg"
+                  >
+                </div>
+                <h4 class="text-xl font-semibold mb-4">1. Capture Your Game Board Like a Pro</h4>
+                <ul class="space-y-2 text-gray-500">
+                  <li class="flex items-start">
+                    <span class="mr-2">•</span>
+                    <span>Grab your smartphone or screenshot tool</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="mr-2">•</span>
+                    <span>Take a crystal-clear, full-screen screenshot of your Block Blast game</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="mr-2">•</span>
+                    <span>Pro Tip: Avoid any pop-ups, overlays, or partial screens</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="mr-2">•</span>
+                    <span>Ensure every single block is visible and in sharp focus</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Step 2 -->
+              <div>
+                <div class="bg-gray-100 rounded-lg mb-6 overflow-hidden">
+                  <img 
+                    src="./public/block-blast-solver-step2.PNG" 
+                    alt="block blast solver step 2" 
+                    class="w-full h-full object-cover border border-slate-200 rounded-lg"
+                  >
+                </div>
+                <h4 class="text-xl font-semibold mb-4">2. Upload with Ease</h4>
+                <ul class="space-y-2 text-gray-500">
+                  <li class="flex items-start">
+                    <span class="mr-2">•</span>
+                    <span>Simply drag and drop your screenshot</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="mr-2">•</span>
+                    <span>Or select the screenshot from your device</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="mr-2">•</span>
+                    <span>Watch our Block Blast Solver spring into action!</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Step 3 -->
+              <div>
+                <div class="bg-gray-100 rounded-lg mb-6 overflow-hidden">
+                  <!-- Image placeholder -->
+                  <img src="/public/block-blast-solver-step3.PNG" alt="block blast solver step 3" class="w-full h-full object-cover border border-slate-200 rounded-lg">
+                </div>
+                <h4 class="text-xl font-semibold mb-4">3. Instant Strategy Unlocked</h4>
+                <ul class="space-y-2 text-gray-500">
+                  <li class="flex items-start">
+                    <span class="mr-2">•</span>
+                    <span>Our AI analyzes your game board in seconds</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="mr-2">•</span>
+                    <span>Receive precise, game-changing move recommendations</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="mr-2">•</span>
+                    <span>Discover block placement strategies you might have missed</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="mr-2">•</span>
+                    <span>Screenshot recognition not 100% accurate? Please switch to our Manual Input Mode</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+
+      <!-- faq section -->
+      <section class="w-full pt-32">
+        <div class="max-w-7xl mx-auto">
+          <!-- Section Header -->
+          <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold mb-4">FAQ About Block Blast Solver 💡</h2>
+            <p class="text-gray-600 max-w-3xl mx-auto">
+              Discover everything you need to know about our Block Blast Solver.
+            </p>
+          </div>
+
+          <!-- FAQ Grid -->
+          <div class="grid grid-cols-1 gap-6">
+            <!-- FAQ Items -->
+            <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-8">
+              <h3 class="text-xl font-semibold mb-4">What is Block Blast Solver? </h3>
+              <p class="text-gray-500">Block Blast Solver is like your personal puzzle assistant! It analyzes your Block Blast game board and gives you smart move suggestions to help you crush those tricky puzzles. Just upload a screenshot, and let the magic happen.</p>
+            </div>
+
+            <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-8">
+              <h3 class="text-xl font-semibold mb-4">How do I use Block Blast Solver?</h3>
+              <p class="text-gray-500">Super simple! Take a clear screenshot of your game board, head over to the Block Blast Solver website, upload your image — you'll get instant recommendations for the best moves to make.</p>
+            </div>
+
+            <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-8">
+              <h3 class="text-xl font-semibold mb-4">Is Block Blast Solver free to use?</h3>
+              <p class="text-gray-500">Absolutely! Block Blast Solver is 100% free, so you can enjoy all its features without spending a dime.</p>
+            </div>
+
+            <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-8">
+              <h3 class="text-xl font-semibold mb-4">What types of file formats can I upload?</h3>
+              <p class="text-gray-500">Good news: Block Blast Solver supports PNG, JPG, GIF, and WEBP formats. Just make sure your screenshot clearly shows your game board for the most accurate analysis.</p>
+            </div>
+
+            <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-8">
+              <h3 class="text-xl font-semibold mb-4">How accurate are the suggestions?</h3>
+              <p class="text-gray-500">We use smart AI algorithms to give you the best possible moves. While the Block Blast Solver is highly accurate, results can vary depending on how complex your board is — but hey, it's all part of the fun!</p>
+            </div>
+
+            <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-8">
+              <h3 class="text-xl font-semibold mb-4">Will my uploaded screenshots be stored?</h3>
+              <p class="text-gray-500">No worries! Your privacy is a top priority. Screenshots are processed only to provide feedback and are not stored or shared without your permission. Be sure to check our privacy policy for all the details.</p>
+            </div>
+
+            <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-8">
+              <h3 class="text-xl font-semibold mb-4">Can I use Block Blast Solver on mobile?</h3>
+              <p class="text-gray-500">Of course! The solver works seamlessly on mobile browsers. Just visit the website, upload your screenshot, and start solving puzzles on the go.</p>
+            </div>
+
+            <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-8">
+              <h3 class="text-xl font-semibold mb-4">What if there are no solutions available?</h3>
+              <p class="text-gray-500">Sometimes, certain boards might not have a clear solution. If that's the case, the solver will let you know — but don't give up, the next round might be a winner!</p>
+            </div>
+
+            <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-8">
+              <h3 class="text-xl font-semibold mb-4">Does using Block Blast Solver give me an unfair advantage?</h3>
+              <p class="text-gray-500">It's all about perspective! Some players see it as a strategy booster, while others use it to overcome tough spots. Either way, it's your game, your rules.</p>
+            </div>
+
+            <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-8">
+              <h3 class="text-xl font-semibold mb-4">Are there any other features?</h3>
+              <p class="text-gray-500">You bet! Besides move suggestions, we're rolling out extras like step-by-step strategies and tips to help you spot winning patterns. Stay tuned for more updates!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Protection section -->
+      <section class="w-full pt-32">
+        <div class="max-w-7xl mx-auto">
+          <!-- Section Header -->
+          <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold mb-4">Block Blast Solver's Commitment to Protection 🔒</h2>
+            <p class="text-gray-600 max-w-3xl mx-auto">
+              We understand that your game screenshots are personal, and your trust is our top priority. We've built the Block Blast Solver with your peace of mind as our guiding principle.
+            </p>
+          </div>
+
+          <!-- Protection Features Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Feature 1 -->
+            <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-8">
+              <h3 class="text-xl font-semibold mb-4">
+                <span class="mr-2">⚡</span>Instant Processing, Instant Deletion
+              </h3>
+              <ul class="space-y-2 text-gray-500">
+                <li class="flex items-start">
+                  <span class="mr-2">•</span>
+                  <span>Processed images are immediately wiped from our system</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="mr-2">•</span>
+                  <span>No lingering data, no digital footprints</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="mr-2">•</span>
+                  <span>Your Block Blast moments remain yours and yours alone</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-8">
+              <h3 class="text-xl font-semibold mb-4">
+                <span class="mr-2">🏰</span>Fortress-Level Security
+              </h3>
+              <ul class="space-y-2 text-gray-500">
+                <li class="flex items-start">
+                  <span class="mr-2">•</span>
+                  <span>All data processing happens directly on your device</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="mr-2">•</span>
+                  <span>No external servers store your game information</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-8">
+              <h3 class="text-xl font-semibold mb-4">
+                <span class="mr-2">🤝</span>Transparent by Design
+              </h3>
+              <ul class="space-y-2 text-gray-500">
+                <li class="flex items-start">
+                  <span class="mr-2">•</span>
+                  <span>No hidden clauses, no complicated legal jargon</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="mr-2">•</span>
+                  <span>Your trust is the only currency that matters to us</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      
+
+    </main>
+
+    <footer class="w-full bg-gray-900 mt-16 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Logo & Description -->
+          <div class="col-span-2">
+            <a href="/" class="flex items-center gap-2 mb-4">
+              <img src="./public/logo.png" alt="Block Blast Solver Logo" class="h-8 w-auto">
+              <h3 class="text-xl font-semibold text-slate-200">Block Blast Solver</h3>
+            </a>
+            <p class="text-gray-400 max-w-sm text-sm">
+              BB Solver (Block Blast Solver) is your intelligent gaming companion that helps you effortlessly solve Block Blast puzzles and enhance your gaming experience.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h4 class="font-semibold mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="/" class="text-gray-400 hover:text-white text-sm">Home</a>
+              </li>
+              <li>
+                <a href="/manual-input.html" class="text-gray-400 hover:text-white text-sm">Manual Input</a>
+              </li>
+              <li>
+                <a href="#how-it-works" class="text-gray-400 hover:text-white text-sm">How to Use</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div>
+            <h4 class="font-semibold mb-4">Support</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="/privacy-policy.html" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="/terms-of-service.html" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+          <p class="text-gray-400 text-sm">
+            © 2024 BB Solver. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module">
+      import { initialize } from './js/main.js';
+      
+      // initialize all functions
+      document.addEventListener('DOMContentLoaded', () => {
+        initialize();
+      });
+    </script>
+
+    <script>
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+
+      document.querySelectorAll('#mobile-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+      document.addEventListener('click', (e) => {
+        if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
+          mobileMenu.classList.add('hidden');
+        }
+      });
+    </script>
+    <!-- Google Analytics -->
+    <script>
+        
+      if (window.location.hostname === 'bbsolver.com') {
+       
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-NSK9QN1NH0';
+        document.head.appendChild(script);
+        
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-NSK9QN1NH0');
+      }
+    </script>
+  </body>
+</html>
