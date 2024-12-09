@@ -5,16 +5,16 @@ Hey there! Welcome to Block Blast Solver, your smart companion for solving Block
 ## Try It Out!
 Experience it yourself at [bbsolver.com](http://bbsolver.com)
 
-## What's Cool About It?
+## What's Cool About Block Blast Solver?
 
 ### 📸 Screenshot Analysis
-- Just upload a screenshot of your game
+- Just upload a screenshot of your Block Blast game
 - Our tool automatically recognizes the 8x8 grid and pieces
 - No manual input needed (unless you want to!)
 - Supports multiple game themes and styles
 - Advanced color detection algorithms
 
-<img width="1264" alt="BB Slover" src="https://github.com/user-attachments/assets/147d7c83-65f5-4dfb-a950-ff03c7278517">
+<img width="1264" alt="Block Blast Slover" src="https://github.com/user-attachments/assets/147d7c83-65f5-4dfb-a950-ff03c7278517">
 
 
 ### 🧠 Smart Solving
@@ -25,10 +25,10 @@ Experience it yourself at [bbsolver.com](http://bbsolver.com)
 - Suggests alternative strategies
 - Explains why each move is optimal
 
-<img width="1231" alt="BB Slover" src="https://github.com/user-attachments/assets/cb9dcec7-0ecb-4f63-b8ca-4306ed57a8e3">
+<img width="1231" alt="Block Blast Slover" src="https://github.com/user-attachments/assets/cb9dcec7-0ecb-4f63-b8ca-4306ed57a8e3">
 
 
-### 🎮 User-Friendly Features
+### 🎮 Block Blast Solver Features
 - Simple drag-and-drop interface
 - Works on both desktop and mobile
 - Supports manual input if you prefer
@@ -50,14 +50,6 @@ Experience it yourself at [bbsolver.com](http://bbsolver.com)
 ### Installation
 No installation needed! Simply visit [bbsolver.com](http://bbsolver.com) to get started.
 
-### How to Use
-1. Visit the website
-2. Take a screenshot of your current game state
-3. Upload the screenshot or use manual input
-4. Get instant solutions and strategies
-5. Follow the suggested moves to win!
-
-
 ## In a Nutshell
 Block Blast Solver is here to make your gaming experience smoother. Whether you're stuck on a tough level or just want to improve your strategy, we've got your back. Give it a try and see the difference it makes!
 
@@ -68,14 +60,6 @@ Block Blast Solver is here to make your gaming experience smoother. Whether you'
 - Tutorial mode for beginners
 - API access for developers
 
-## Tech Stack
-- Frontend: React.js
-- Image Processing: TensorFlow.js
-- Solving Algorithm: Custom implementation
-- PWA: Service Workers
-- UI Framework: Material-UI
 
 Happy blasting! 🎉
 
----
-Made with ❤️ by the Block Blast Solver Team
