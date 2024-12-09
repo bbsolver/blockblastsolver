@@ -13,7 +13,9 @@ Experience it yourself at [bbsolver.com](http://bbsolver.com)
 - No manual input needed (unless you want to!)
 - Supports multiple game themes and styles
 - Advanced color detection algorithms
-![BB Solver](image-1.png)
+
+<img width="1264" alt="BB Slover" src="https://github.com/user-attachments/assets/147d7c83-65f5-4dfb-a950-ff03c7278517">
+
 
 ### 🧠 Smart Solving
 - Finds the best possible moves
@@ -23,7 +25,8 @@ Experience it yourself at [bbsolver.com](http://bbsolver.com)
 - Suggests alternative strategies
 - Explains why each move is optimal
 
-![BB Solver](image-2.png)
+<img width="1231" alt="BB Slover" src="https://github.com/user-attachments/assets/cb9dcec7-0ecb-4f63-b8ca-4306ed57a8e3">
+
 
 ### 🎮 User-Friendly Features
 - Simple drag-and-drop interface
